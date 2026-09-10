@@ -67,14 +67,14 @@ export function pauseMarkup({ sheet, art, icon, head }) {
     <div class="little-actions"><button class="menu-tool" data-action="quit" aria-label="Save and go home">${icon('home')}</button><button class="menu-tool" data-action="howto" aria-label="How to play">${icon('help')}</button><button class="menu-tool" data-action="settings" aria-label="Game settings">${icon('settings')}</button></div>`;
 }
 
-export function resultMarkup({ result, oldBest, mission, sheet, art, icon, head, format, time }) {
+export function resultMarkup({ result, oldBest, mission, sheet, art, icon, head, format, time, firstClear=true }) {
   const world=journeyFor(result.character),chapter=world.chapters[result.index];
   const endless = result.mode === 'endless', final = result.won && result.index === 5 && !endless;
   const next = result.won && !endless && !final;
   const handoff=final?nextFriend(world.id):null,finished=final&&world.id==='bop';
   const title = !result.won ? 'Another go?' : final ? (world.id==='pip'?'Hello, forest!':world.id==='bop'?'Hello, city!':'Home again!') : endless ? 'Nice climb!' : 'You did it!';
   return `${head('', finished?'Together, we did it!':title, 'home')}<div class="result-picture ${final?'finale-picture':''} ${finished?'friends-finale':''}">${finished?CHARACTERS.map(c=>`<span class="finale-friend">${art(c.sheet,7)}</span>`).join(''):`<span class="result-hero">${art(sheet, result.won ? 7 : 0)}</span><span class="result-sticker">${handoff?art(handoff.sheet,7):result.won&&!endless?art(world.sheet,final?23:22):art('friends',result.won?6:15)}</span>`}</div>
-    ${result.won&&!endless?`<p class="story-line">${final?world.ending:chapter.ending}</p><div class="chapter-stitches" aria-label="Story chapter ${result.index+1} of 6">${[0,1,2,3,4,5].map(i=>`<i class="${i<=result.index?'done':''}"></i>`).join('')}</div>`:''}
+    ${result.won&&!endless?`${firstClear?`<p class="story-line">${final?world.ending:chapter.ending}</p>`:''}<div class="chapter-stitches" aria-label="Story chapter ${result.index+1} of 6">${[0,1,2,3,4,5].map(i=>`<i class="${i<=result.index?'done':''}"></i>`).join('')}</div>`:''}
     ${result.won && !endless ? `<div class="picture-stars" aria-label="${result.stars} of 3 stars">${[0,1,2].map(i => `<span class="${i < result.stars ? '' : 'not-yet'}">${art('friends', 6)}</span>`).join('')}</div>` : ''}
     <div class="pocket-loot"><span aria-label="${result.crystals} ${world.tokens}"><i>${art(world.sheet, 12)}</i><strong>${result.crystals}</strong></span><span aria-label="${endless ? `${result.height} meters climbed` : `${result.relics} ${world.relics}`}">${endless ? icon('up') : `<i>${art(world.sheet, 13)}</i>`}<strong>${endless ? format(result.height) : result.relics}</strong></span></div>
     <button class="primary wide" data-action="${next ? 'next' : handoff ? 'handoff' : finished?'home':'retry'}">${next ? `<span class="next-island">${art(world.sheet, 7 + result.index)}</span> Next! ${icon('arrow')}` : handoff ? `<span class="next-island">${art(handoff.sheet,0)}</span> Let’s go, ${handoff.name}! ${icon('arrow')}` : finished?`${icon('star')} Play our favorites`:`${icon('retry')} Play again`}</button>

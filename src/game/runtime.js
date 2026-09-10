@@ -224,7 +224,7 @@ export function mountGame(root) {
     try {
       const loaded=await loadAssets(count=>{if(!lifetime.disposed)$('#loading-progress').value=count;});
       if(lifetime.disposed)return;
-      assets=loaded;renderer=new Renderer(canvas,assets,settings);renderHome();$('#loading').hidden=true;lifetime.request(frame);
+      assets=loaded;renderer=new Renderer(canvas,assets,settings,id=>store.markSignSeen(id));renderer.setSeenSigns(Object.keys(store.data.signsSeen));renderHome();$('#loading').hidden=true;lifetime.request(frame);
       if(store.migrated){toast('Your earlier adventure is safe with Nova. Pip and Bop have new worlds!');store.migrated=false;}
       if(store.restartedIndex!==null){toast('New routes to explore! Your stars are safe. This world starts fresh.');store.restartedIndex=null;}
     } catch(error) {

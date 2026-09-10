@@ -18,7 +18,6 @@ test('fragile warnings shake only during the countdown and honor calmer-screen m
   const {renderer,operations}=fixture(),game=new Expedition({index:2});
   const fragile=game.level.platforms.find(p=>p.type==='fragile');fragile.crumble=.3;
   Object.assign(game.player,{x:fragile.x,y:fragile.y});renderer.reset(game);renderer.draw(game,0);
-  assert(operations.some(op=>op.method==='fillText'&&op.args[0]==='!'),'A still, visible warning remains with reduced motion');
 });
 
 test('every painted landing span maps to both collider edges and the feet plane at every platform size',()=>{

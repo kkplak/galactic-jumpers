@@ -139,8 +139,8 @@ export function makeLevel(index = 0, endless = false, character = 'nova') {
   const last = platforms.at(-1);
   const anchors=world.id==='bop'?platforms.filter(p=>p.approach==='hook').map(p=>({platformId:p.id,offsetY:84})):[];
   const abilityTip=world.id==='pip'?'Tap TAIL for a big leap!':world.id==='bop'?'Hold HOOK near a glowing gear!':'Hold FLY to fly!';
-  const signs=endless?[{x:240,y:24,text:'Two minutes. How high can you go?'}]:SIGNS[index].map(([x,y,text])=>({x:240+(x-240)*spread,y:raised(y),text:text.replace('Blue rocks are safe','Glowing spots save your place').replace('crystals',world.tokens).replace('robots','flyers').replace('Hold BOOST to fly!',abilityTip).replace('Jetpack time!',abilityTip).replace('Land to refill',world.id==='nova'?'Land to refill':'Land to recharge')}));
-  if(world.id!=='nova'&&trails.length){const from=platforms[trails[0].from];signs.unshift({x:from.x,y:from.y+48,text:abilityTip});}
+  const signs=endless?[{x:240,y:24,text:'Two minutes. How high can you go?',id:'sign-endless'}]:SIGNS[index].map(([x,y,text],i)=>({x:240+(x-240)*spread,y:raised(y),text:text.replace('Blue rocks are safe','Glowing spots save your place').replace('crystals',world.tokens).replace('robots','flyers').replace('Hold BOOST to fly!',abilityTip).replace('Jetpack time!',abilityTip).replace('Land to refill',world.id==='nova'?'Land to refill':'Land to recharge'),id:`sign-${character}-${index}-${i}`}));
+  if(world.id!=='nova'&&trails.length){const from=platforms[trails[0].from];signs.unshift({x:from.x,y:from.y+48,text:abilityTip,id:`sign-${character}-${index}-ability`});}
   return { revision: LEVEL_REVISION, mission, world, chapter, platforms, collectibles, enemies, trails, anchors,
     signs,
     gravity: mission.gravity ?? PHYSICS.gravity, height: last.y,

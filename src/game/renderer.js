@@ -21,12 +21,15 @@ export async function loadAssets(onProgress = () => {}) {
 }
 
 export class Renderer {
-  constructor(canvas, assets, settings) {
+  constructor(canvas, assets, settings, onSignSeen = () => {}) {
     this.canvas = canvas;this.ctx = canvas.getContext('2d', {alpha: false}); if (!this.ctx) throw new Error('This browser does not support the game canvas.');
     this.assets = assets;this.settings = settings;this.camera = 0;this.particles = [];this.rings = [];this.callouts = [];this.shake = 0;this.flash = 0;
+    this.seenSigns = new Set();this.onSignSeen = onSignSeen;
     const rand = random(887);this.stars = Array.from({length: 55}, () => ({x: rand(),y: rand(),r: rand() * 1.2 + 0.4,phase: rand() * 6.28}));
     this.resize();
   }
+  setSeenSigns(ids) {this.seenSigns = new Set(ids);}
+  hintOnce(id, fn) {if(this.seenSigns.has(id))return;this.seenSigns.add(id);this.onSignSeen(id);fn();}
   resize() {
     this.width = window.innerWidth;this.height = window.innerHeight;
     this.ratio = Math.min(window.devicePixelRatio || 1, 2);this.canvas.width = Math.round(this.width * this.ratio);this.canvas.height = Math.round(this.height * this.ratio);
@@ -62,10 +65,10 @@ export class Renderer {
     if(event.type==='hook')this.burst(event.x,event.y+30,'#9af7f4',8);
     if(event.type==='checkpoint') {
       const platform=game?.platform(event.id);
-      this.popup('✓ Saved!',platform?platform.x-platform.w*.32:event.x,event.y+45,'checkpoint');
+      this.hintOnce('hint-checkpoint',()=>this.popup('✓ Saved!',platform?platform.x-platform.w*.32:event.x,event.y+45,'checkpoint'));
     }
-    if(event.type==='refuel')this.popup(game?.character==='nova'?'⚡ Full!':'✓ Ready!',game?.platform(game.player.groundId)?.x??event.x,event.y+12,'refuel',2.2);
-    if(event.type==='goalLocked'&&game)this.popup(`Find ${event.missing} more!`,game.level.goal.x,game.level.goal.y+94,'goal',3.4);
+    if(event.type==='refuel')this.hintOnce('hint-refuel-popup',()=>this.popup(game?.character==='nova'?'⚡ Full!':'✓ Ready!',game?.platform(game.player.groundId)?.x??event.x,event.y+12,'refuel',2.2));
+    if(event.type==='goalLocked'&&game)this.hintOnce('hint-goal-locked',()=>this.popup(`Find ${event.missing} more!`,game.level.goal.x,game.level.goal.y+94,'goal',3.4));
   }
   sprite(name, index, x, y, width, height, flip = false, angle = 0, alpha = 1) {
     const c = this.ctx, rect = this.assets.rects[name][index];
@@ -128,7 +131,7 @@ export class Renderer {
       if(this.y(to.y)>h+60||this.y(from.y)<-60)continue;
       c.strokeStyle='#ffd48745';c.lineWidth=3*s;c.setLineDash([5*s,12*s]);
       c.beginPath();c.moveTo(this.x(from.x),this.y(from.y+50));c.lineTo(this.x(to.x),this.y(to.y-30));c.stroke();c.setLineDash([]);
-      labels.push({text:'↑',x:from.x+(to.x-from.x)*.5,y:(from.y+to.y)*.5,compact:true});
+      this.hintOnce('hint-trail',()=>labels.push({text:'↑',x:from.x+(to.x-from.x)*.5,y:(from.y+to.y)*.5,compact:true}));
     }
     for(const platform of game.level.platforms) {
       const py=this.y(platform.y);if(py < -100||py>h+110)continue;
@@ -151,12 +154,11 @@ export class Renderer {
       }else this.sprite(world.sheet,terrainFrame,art.x,art.y,art.width,art.height,false,0,faded);
       c.globalAlpha=faded;c.strokeStyle=warning?'#ffdc87':fragile?'#c79eff':platform.type==='refuel'?'#ffcd73':platform.type==='checkpoint'?'#bcf8ac':'#83d9d8';c.lineWidth=(warning?3:2)*s;
       c.beginPath();c.moveTo(this.x(platform.x-platform.w/2),py);c.lineTo(this.x(platform.x+platform.w/2),py);c.stroke();c.globalAlpha=1;
-      if(warning)labels.push({text:'!',x:platform.x+platform.w*.32,y:platform.y-17,compact:true});
-      if(platform.type==='moving')labels.push({text:'‹ ›',x:platform.x,y:platform.y-19,compact:true});
-      if(platform.type==='lift')labels.push({text:'↑ ↓',x:platform.x,y:platform.y-19,compact:true});
+      if(platform.type==='moving')this.hintOnce('hint-moving',()=>labels.push({text:'‹ ›',x:platform.x,y:platform.y-19,compact:true}));
+      if(platform.type==='lift')this.hintOnce('hint-lift',()=>labels.push({text:'↑ ↓',x:platform.x,y:platform.y-19,compact:true}));
       if(platform.type==='refuel'){
         this.glow(platform.x,platform.y,50,'#ffc36a28');
-        labels.push({text:world.id==='nova'?'⚡':'✓',x:platform.x,y:platform.y-19,compact:true});
+        this.hintOnce('hint-refuel-marker',()=>labels.push({text:world.id==='nova'?'⚡':'✓',x:platform.x,y:platform.y-19,compact:true}));
       }
       if(platform.type==='checkpoint' && platform.id!==game.level.platforms.length-1){
         this.glow(platform.x-platform.w*.32,platform.y+22,47,platform.id<=game.checkpoint?'#ccfb7740':'#65dce42b');
@@ -185,13 +187,13 @@ export class Renderer {
       c.strokeStyle='#173c50';c.lineWidth=5*s;c.beginPath();c.moveTo(this.x(p.x+p.facing*11),this.y(p.y+30));c.lineTo(this.x(platform.x),this.y(ay));c.stroke();
       c.strokeStyle='#a4ffed';c.lineWidth=2.5*s;c.stroke();
     }
-    const sign=game.level.signs.filter(sign=>Math.abs(sign.y-p.y)<190&&this.y(sign.y)>110&&this.y(sign.y)<this.bottom+5).sort((a,b)=>Math.abs(a.y-p.y)-Math.abs(b.y-p.y))[0];
-    if(sign&&!this.callouts.length)labels.push(sign);
+    const sign=game.level.signs.filter(sign=>!this.seenSigns.has(sign.id)&&Math.abs(sign.y-p.y)<190&&this.y(sign.y)>110&&this.y(sign.y)<this.bottom+5).sort((a,b)=>Math.abs(a.y-p.y)-Math.abs(b.y-p.y))[0];
+    if(sign&&!this.callouts.length){labels.push(sign);this.seenSigns.add(sign.id);this.onSignSeen(sign.id);}
     if(game.mode==='campaign') {
       const goal=game.level.goal;if(this.y(goal.y)>-140&&this.y(goal.y)<h+130){
         this.glow(goal.x,goal.y+40,95,game.crystals>=goal.required?'#74eeee55':'#74eeee20');
         this.sprite(world.sheet,15,goal.x,goal.y,87,94,false,0,game.crystals>=goal.required?1:.6);
-        if(!this.callouts.some(label=>label.kind==='goal'))labels.push({text:game.crystals>=goal.required?'Let’s go!':`${game.crystals} / ${goal.required}`,x:goal.x,y:goal.y+94});
+
       }
     }
     for(const item of game.level.collectibles){
@@ -207,7 +209,6 @@ export class Renderer {
       if(enemy.type==='swooper'&&enemy.warning&&!bonked){
         c.strokeStyle='#ffc38d88';c.lineWidth=2*s;c.setLineDash([4*s,9*s]);
         c.beginPath();c.moveTo(this.x(48),this.y(enemy.y));c.lineTo(this.x(432),this.y(enemy.y));c.stroke();c.setLineDash([]);
-        labels.push({text:enemy.facing>0?'! →':'← !',x:enemy.x,y:enemy.y+40,compact:true});
       }
       const spriteFrame={crawler:18,hopper:19,swooper:20,drone:21}[enemy.type];
       const height=enemy.type==='crawler'?32:enemy.type==='hopper'?(enemy.state==='hop'?43:enemy.warning?27:34):39;
@@ -215,8 +216,6 @@ export class Renderer {
       const tilt=this.settings.reducedMotion||bonked?0:enemy.type==='crawler'?Math.sin(enemy.age*12)*.055:enemy.type==='swooper'&&enemy.state==='dash'?.08:0;
       this.glow(enemy.x,enemy.y,30,bonked?'#ffe58b25':'#ffb38c18');
       this.sprite(world.sheet,spriteFrame,enemy.x,enemy.y-height/2,width,height,enemy.facing<0,tilt,bonked?.45:1);
-      if(bonked)labels.push({text:'✦',x:enemy.x,y:enemy.y+35,compact:true});
-      else if(enemy.type==='hopper'&&enemy.warning)labels.push({text:'↑',x:enemy.x,y:enemy.y+38,compact:true});
     }
     if(game.mode==='campaign'){
       const companionX=p.x-p.facing*31,companionY=p.y+44+(this.settings.reducedMotion?0:Math.sin(game.elapsed*2.5)*3);

@@ -11,7 +11,7 @@ export const characterUnlocked = (data,id) => CHARACTERS.findIndex(c=>c.id===id)
 export const nextFriend = id => CHARACTERS[CHARACTERS.findIndex(c=>c.id===id)+1]??null;
 
 export function freshSave() {
-  const data = { version: 3, character: 'nova', journeys: Object.fromEntries(CHARACTERS.map(({id})=>[id,freshJourney()])), endlessBest: 0, settings: defaultSettings(), tutorialSeen: false, abilityGuides: {nova:false,pip:false,bop:false} };
+  const data = { version: 3, character: 'nova', journeys: Object.fromEntries(CHARACTERS.map(({id})=>[id,freshJourney()])), endlessBest: 0, settings: defaultSettings(), tutorialSeen: false, abilityGuides: {nova:false,pip:false,bop:false}, signsSeen: {} };
   // Convenience views for the selected journey. Only the explicit journeys map
   // is serialized, so saves never contain competing copies of progress.
   for (const key of ['unlocked','missions','activeRun']) Object.defineProperty(data,key,{
@@ -42,6 +42,7 @@ export function validateSave(value) {
   clean.character=characterFor(value.character).id;
   clean.endlessBest=Math.floor(number(value.endlessBest));clean.tutorialSeen=value.tutorialSeen===true;
   for(const {id} of CHARACTERS)clean.abilityGuides[id]=value.version===3?value.abilityGuides?.[id]===true:id==='nova'&&clean.tutorialSeen;
+  if(value.signsSeen&&typeof value.signsSeen==='object')for(const key of Object.keys(value.signsSeen).slice(0,300))if(typeof key==='string'&&value.signsSeen[key]===true)clean.signsSeen[key]=true;
   for(const key of Object.keys(clean.settings))if(typeof value.settings?.[key]==='boolean')clean.settings[key]=value.settings[key];
   if(value.version===1){
     // The earlier shared campaign used Nova's routes. Preserve it there once;
@@ -67,6 +68,7 @@ export class SaveStore {
     }catch{this.data=freshSave();this.available=false;}
   }
   write(){try{this.storage.setItem(KEY,JSON.stringify(this.data));this.available=true;return true;}catch{this.available=false;return false;}}
+  markSignSeen(id){if(this.data.signsSeen[id])return true;this.data.signsSeen[id]=true;return this.write();}
   setRun(run){progressFor(this.data,run?.character??this.data.character).activeRun=run;return this.write();}
   chooseCharacter(id){if(!characterUnlocked(this.data,id))return false;this.data.character=id;return this.write();}
   complete(result){
