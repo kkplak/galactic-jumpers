@@ -1,0 +1,786 @@
+[
+  {
+    "name": "title-world",
+    "prompt": "Use case: stylized-concept\nAsset type: original raster background art for a 2D indie space adventure, 1536x1024 landscape.\nPrimary request: A gorgeous cinematic alien moon landscape with a huge crescent planet and orbital rings in the upper right, ancient broken floating stone platforms and glowing cyan ruins concentrated on the right and lower half, faint stars and dramatic teal light. A small original pale-suited explorer stands on the far-right ledge wearing a round glass helmet and citron yellow backpack.\nComposition: Very dark, clear negative space across the entire left half for a native game title and menu that will be overlaid later. Place large and detailed scenery on the right; left has only quiet deep navy atmospheric space.\nStyle/medium: Sophisticated painterly 2D indie game art, soft gouache, fine grain, beautiful restrained shapes and luminous edges.\nColor palette: Deep ink navy, luminous teal, electric citron accents, blue alien stone, warm pale astronaut.\nConstraints: Artwork only. No UI, no text, no lettering, no logos, no watermark.",
+    "path": "art-source/title-world.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "image_mode": "RGB"
+  },
+  {
+    "name": "explorer-atlas",
+    "prompt": "Use case: stylized-concept\nAsset type: production transparent PNG sprite atlas for a 2D indie space adventure.\nPrimary request: Exactly EIGHT full-body sprites of ONE original cute brave compact astronaut. Render precisely 4 COLUMNS by 2 ROWS, equal square cells; total image 1024x512 pixels (or proportional 2:1 dimensions). There is NO padding between cells. Imaginary cell size 256x256. Every character is centered at x=128 inside its own cell, feet at y=220, full body safely contained in the central 150x190 area. Maintain EXACTLY the same camera scale, silhouette identity, suit, colors, lighting, and design in all eight cells.\nSubject: Oversized rounded warm pale helmet, reflective teal-black glass visor, cream suit, citron yellow jetpack, orange scarf. Compact proportions. Side or three-quarter view facing RIGHT consistently.\nExact reading order left to right:\nTOP ROW: idle standing; running stride left leg; running stride right leg; rising jump with knees tucked.\nBOTTOM ROW: falling with legs down; jetpack flying with small cyan exhaust; landing crouch; celebration with raised arms.\nStyle/medium: Sophisticated soft gouache with fine grain, painterly 2D indie game art; crisp legible sprite silhouettes. Deep ink navy details, luminous teal, electric citron accents, warm pale suit.\nBackground: GENUINELY TRANSPARENT ALPHA, transparent PNG; no solid background and no checkerboard. No shadows outside sprite. Each sprite isolated from all others.\nConstraints: Exactly four columns and two rows. No text, letters, numbers, labels, borders, cell/grid lines, floor, scene, logos, or watermark. Do not combine characters within a cell.",
+    "path": "art-source/explorer-atlas.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image_mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_fraction": 0.6627,
+    "cell_size": [
+      443.5,
+      443.5
+    ],
+    "cell_alpha_bounds": [
+      {
+        "column": 0,
+        "row": 0,
+        "rounded_crop": [
+          0,
+          0,
+          444,
+          444
+        ],
+        "local_content_bounds": [
+          79,
+          44,
+          348,
+          415
+        ]
+      },
+      {
+        "column": 1,
+        "row": 0,
+        "rounded_crop": [
+          444,
+          0,
+          887,
+          444
+        ],
+        "local_content_bounds": [
+          72,
+          54,
+          362,
+          409
+        ]
+      },
+      {
+        "column": 2,
+        "row": 0,
+        "rounded_crop": [
+          887,
+          0,
+          1330,
+          444
+        ],
+        "local_content_bounds": [
+          76,
+          51,
+          362,
+          412
+        ]
+      },
+      {
+        "column": 3,
+        "row": 0,
+        "rounded_crop": [
+          1330,
+          0,
+          1774,
+          444
+        ],
+        "local_content_bounds": [
+          82,
+          28,
+          366,
+          371
+        ]
+      },
+      {
+        "column": 0,
+        "row": 1,
+        "rounded_crop": [
+          0,
+          444,
+          444,
+          887
+        ],
+        "local_content_bounds": [
+          78,
+          45,
+          360,
+          398
+        ]
+      },
+      {
+        "column": 1,
+        "row": 1,
+        "rounded_crop": [
+          444,
+          444,
+          887,
+          887
+        ],
+        "local_content_bounds": [
+          46,
+          33,
+          401,
+          381
+        ]
+      },
+      {
+        "column": 2,
+        "row": 1,
+        "rounded_crop": [
+          887,
+          444,
+          1330,
+          887
+        ],
+        "local_content_bounds": [
+          79,
+          107,
+          375,
+          386
+        ]
+      },
+      {
+        "column": 3,
+        "row": 1,
+        "rounded_crop": [
+          1330,
+          444,
+          1774,
+          887
+        ],
+        "local_content_bounds": [
+          78,
+          45,
+          366,
+          404
+        ]
+      }
+    ],
+    "grid": {
+      "columns": 4,
+      "rows": 2
+    }
+  },
+  {
+    "name": "objects-atlas",
+    "prompt": "Use case: stylized-concept\nAsset type: production transparent PNG object sprite atlas for a 2D indie space adventure.\nPrimary request: Exactly EIGHT discrete game objects in a precise grid of 4 COLUMNS by 2 ROWS, equal 256x256 square cells, total 1024x512 pixels (or proportional 2:1 dimensions). NO padding between cells. Each object is centered in its own cell with generous fully transparent margins. Every object must remain fully inside its own cell and never overlap a neighboring cell.\nExact content reading order left to right:\nTOP ROW, column 1: hovering hostile compact navy robotic drone with a cyan eye, side view.\nTOP ROW, column 2: luminous faceted citron energy crystal.\nTOP ROW, column 3: blue ancient stone obelisk checkpoint glowing cyan.\nTOP ROW, column 4: luminous cyan circular teleport portal standing on a small stone foot, viewed front.\nBOTTOM ROW, column 1: floating dark blue rough stone platform with cyan cracks, straight flat horizontal upper surface, 220 pixels wide and 70 pixels tall, centered at cell y=128.\nBOTTOM ROW, column 2: purple cracked fragile floating platform with same flat upper surface and same 220x70 proportions, centered at cell y=128.\nBOTTOM ROW, column 3: gold ancient disc relic.\nBOTTOM ROW, column 4: hovering pale blue shield powerup orb.\nStyle/medium: Gorgeous sophisticated painterly 2D indie space adventure, soft gouache and fine grain. Deep ink navy, luminous teal, electric citron accents, blue alien stone. Crisp readable silhouettes, controlled soft glow within each cell.\nBackground: GENUINELY TRANSPARENT ALPHA, transparent PNG. No solid background, no checkerboard.\nConstraints: Exactly four columns and two rows, one described object per cell. No letters, numbers, labels, grid lines, borders, backdrop, scene, text, logos, or watermark.",
+    "path": "art-source/objects-atlas.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image_mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_fraction": 0.6435,
+    "cell_size": [
+      443.5,
+      443.5
+    ],
+    "cell_alpha_bounds": [
+      {
+        "column": 0,
+        "row": 0,
+        "rounded_crop": [
+          0,
+          0,
+          444,
+          444
+        ],
+        "local_content_bounds": [
+          59,
+          108,
+          406,
+          388
+        ]
+      },
+      {
+        "column": 1,
+        "row": 0,
+        "rounded_crop": [
+          444,
+          0,
+          887,
+          444
+        ],
+        "local_content_bounds": [
+          106,
+          59,
+          340,
+          410
+        ]
+      },
+      {
+        "column": 2,
+        "row": 0,
+        "rounded_crop": [
+          887,
+          0,
+          1330,
+          444
+        ],
+        "local_content_bounds": [
+          61,
+          48,
+          380,
+          428
+        ]
+      },
+      {
+        "column": 3,
+        "row": 0,
+        "rounded_crop": [
+          1330,
+          0,
+          1774,
+          444
+        ],
+        "local_content_bounds": [
+          50,
+          53,
+          396,
+          425
+        ]
+      },
+      {
+        "column": 0,
+        "row": 1,
+        "rounded_crop": [
+          0,
+          444,
+          444,
+          887
+        ],
+        "local_content_bounds": [
+          21,
+          142,
+          429,
+          328
+        ]
+      },
+      {
+        "column": 1,
+        "row": 1,
+        "rounded_crop": [
+          444,
+          444,
+          887,
+          887
+        ],
+        "local_content_bounds": [
+          20,
+          143,
+          427,
+          329
+        ]
+      },
+      {
+        "column": 2,
+        "row": 1,
+        "rounded_crop": [
+          887,
+          444,
+          1330,
+          887
+        ],
+        "local_content_bounds": [
+          69,
+          52,
+          377,
+          372
+        ]
+      },
+      {
+        "column": 3,
+        "row": 1,
+        "rounded_crop": [
+          1330,
+          444,
+          1774,
+          887
+        ],
+        "local_content_bounds": [
+          46,
+          74,
+          396,
+          362
+        ]
+      }
+    ],
+    "grid": {
+      "columns": 4,
+      "rows": 2
+    }
+  },
+  {
+    "name": "pip-atlas",
+    "path": "art-source/pip-atlas.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "image_mode": "RGBA",
+    "source_crop_bounds": [
+      [
+        39,
+        64,
+        335,
+        485
+      ],
+      [
+        389,
+        64,
+        743,
+        480
+      ],
+      [
+        798,
+        64,
+        1135,
+        480
+      ],
+      [
+        1193,
+        35,
+        1509,
+        443
+      ],
+      [
+        29,
+        542,
+        351,
+        959
+      ],
+      [
+        376,
+        538,
+        805,
+        904
+      ],
+      [
+        812,
+        591,
+        1165,
+        947
+      ],
+      [
+        1187,
+        536,
+        1512,
+        953
+      ]
+    ],
+    "grid": {
+      "columns": 4,
+      "rows": 2
+    },
+    "production": {
+      "path": "public/assets/pip-atlas.webp",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "quality": 84,
+      "frames": [
+        [
+          42,
+          6,
+          172,
+          244
+        ],
+        [
+          280,
+          6,
+          208,
+          244
+        ],
+        [
+          541,
+          6,
+          198,
+          244
+        ],
+        [
+          801,
+          6,
+          189,
+          244
+        ],
+        [
+          34,
+          262,
+          188,
+          244
+        ],
+        [
+          262,
+          280,
+          244,
+          208
+        ],
+        [
+          519,
+          262,
+          242,
+          244
+        ],
+        [
+          801,
+          262,
+          190,
+          244
+        ]
+      ]
+    },
+    "prompt_record": "docs/new-art-prompts.md"
+  },
+  {
+    "name": "bop-atlas",
+    "path": "art-source/bop-atlas.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "image_mode": "RGBA",
+    "source_crop_bounds": [
+      [
+        53,
+        66,
+        319,
+        499
+      ],
+      [
+        423,
+        68,
+        730,
+        499
+      ],
+      [
+        817,
+        71,
+        1140,
+        502
+      ],
+      [
+        1232,
+        36,
+        1498,
+        444
+      ],
+      [
+        20,
+        540,
+        360,
+        952
+      ],
+      [
+        384,
+        543,
+        789,
+        923
+      ],
+      [
+        830,
+        606,
+        1124,
+        955
+      ],
+      [
+        1200,
+        550,
+        1524,
+        956
+      ]
+    ],
+    "grid": {
+      "columns": 4,
+      "rows": 2
+    },
+    "production": {
+      "path": "public/assets/bop-atlas.webp",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "quality": 84,
+      "frames": [
+        [
+          53,
+          6,
+          150,
+          244
+        ],
+        [
+          297,
+          6,
+          174,
+          244
+        ],
+        [
+          548,
+          6,
+          183,
+          244
+        ],
+        [
+          816,
+          6,
+          159,
+          244
+        ],
+        [
+          27,
+          262,
+          201,
+          244
+        ],
+        [
+          262,
+          269,
+          244,
+          229
+        ],
+        [
+          537,
+          262,
+          206,
+          244
+        ],
+        [
+          798,
+          262,
+          195,
+          244
+        ]
+      ]
+    },
+    "prompt_record": "docs/new-art-prompts.md"
+  },
+  {
+    "name": "friends-atlas",
+    "path": "art-source/friends-atlas.png",
+    "mode": "built-in imagegen",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "image_mode": "RGBA",
+    "source_crop_bounds": [
+      [
+        9,
+        83,
+        309,
+        293
+      ],
+      [
+        344,
+        81,
+        636,
+        288
+      ],
+      [
+        701,
+        109,
+        931,
+        296
+      ],
+      [
+        1043,
+        1,
+        1236,
+        290
+      ],
+      [
+        37,
+        369,
+        282,
+        588
+      ],
+      [
+        313,
+        377,
+        616,
+        562
+      ],
+      [
+        657,
+        350,
+        909,
+        592
+      ],
+      [
+        964,
+        314,
+        1238,
+        617
+      ],
+      [
+        14,
+        641,
+        305,
+        925
+      ],
+      [
+        345,
+        623,
+        609,
+        914
+      ],
+      [
+        642,
+        651,
+        929,
+        924
+      ],
+      [
+        961,
+        689,
+        1247,
+        921
+      ],
+      [
+        23,
+        1000,
+        312,
+        1231
+      ],
+      [
+        343,
+        915,
+        604,
+        1244
+      ],
+      [
+        638,
+        959,
+        926,
+        1232
+      ],
+      [
+        951,
+        984,
+        1242,
+        1213
+      ]
+    ],
+    "grid": {
+      "columns": 4,
+      "rows": 4
+    },
+    "production": {
+      "path": "public/assets/friends-atlas.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "quality": 84,
+      "frames": [
+        [
+          6,
+          42,
+          244,
+          171
+        ],
+        [
+          262,
+          41,
+          244,
+          173
+        ],
+        [
+          525,
+          34,
+          230,
+          187
+        ],
+        [
+          814,
+          6,
+          163,
+          244
+        ],
+        [
+          6,
+          275,
+          244,
+          218
+        ],
+        [
+          262,
+          309,
+          244,
+          149
+        ],
+        [
+          518,
+          267,
+          244,
+          234
+        ],
+        [
+          785,
+          262,
+          221,
+          244
+        ],
+        [
+          6,
+          521,
+          244,
+          238
+        ],
+        [
+          273,
+          518,
+          221,
+          244
+        ],
+        [
+          518,
+          524,
+          244,
+          232
+        ],
+        [
+          774,
+          541,
+          244,
+          198
+        ],
+        [
+          6,
+          798,
+          244,
+          195
+        ],
+        [
+          287,
+          774,
+          194,
+          244
+        ],
+        [
+          518,
+          780,
+          244,
+          231
+        ],
+        [
+          774,
+          800,
+          244,
+          192
+        ]
+      ]
+    },
+    "prompt_record": "docs/new-art-prompts.md"
+  }
+]

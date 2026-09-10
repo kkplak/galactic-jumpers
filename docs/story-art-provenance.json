@@ -1,0 +1,3320 @@
+{
+  "date": "2026-09-09",
+  "generationMode": "built-in imagegen",
+  "generationCalls": 6,
+  "regenerations": 0,
+  "rectFormat": "[x, y, width, height], integer pixels; right/bottom exclusive",
+  "promptsPath": "docs/story-art-prompts.md",
+  "assets": [
+    {
+      "name": "bop-scenes.png",
+      "path": "art-source/bop-scenes.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 2500726,
+      "sha256": "5d77fa7c7fa293a233523d76f6f4834ab93627895665d15abfff69c5722a485a",
+      "grid": {
+        "columns": 3,
+        "rows": 2
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "chapter": 1,
+          "name": "Bolt Beach",
+          "crop": [
+            0,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 1,
+          "chapter": 2,
+          "name": "Bubble Pipes",
+          "crop": [
+            362,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 2,
+          "chapter": 3,
+          "name": "Gearworks",
+          "crop": [
+            724,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 3,
+          "chapter": 4,
+          "name": "Rocket Orchard",
+          "crop": [
+            0,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 4,
+          "chapter": 5,
+          "name": "Magnet Sky",
+          "crop": [
+            362,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 5,
+          "chapter": 6,
+          "name": "Lantern City",
+          "crop": [
+            724,
+            724,
+            362,
+            724
+          ]
+        }
+      ],
+      "alpha": {
+        "present": false,
+        "opaque": true
+      },
+      "sixDiscretePortraitPanelsConfirmed": true,
+      "gridDrift": false,
+      "notes": [
+        "Strict full-bleed 3-column by 2-row grid; discontinuities confirmed at x=362, x=724, and y=724.",
+        "No text, people, or UI observed. Every chapter has distinct terrain and structures."
+      ],
+      "optimized": {
+        "path": "public/assets/bop-scenes.webp",
+        "size": [
+          1086,
+          1448
+        ],
+        "quality": 80,
+        "bytes": 234610,
+        "frames": [
+          [
+            0,
+            0,
+            362,
+            724
+          ],
+          [
+            362,
+            0,
+            362,
+            724
+          ],
+          [
+            724,
+            0,
+            362,
+            724
+          ],
+          [
+            0,
+            724,
+            362,
+            724
+          ],
+          [
+            362,
+            724,
+            362,
+            724
+          ],
+          [
+            724,
+            724,
+            362,
+            724
+          ]
+        ]
+      }
+    },
+    {
+      "name": "bop-world.png",
+      "path": "art-source/bop-world.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "bytes": 2377597,
+      "sha256": "cbd812f133f2eebf8032fb7ed55c4cac46d1fd50b900161d8006bc7c85bab9c3",
+      "grid": {
+        "columns": 4,
+        "rows": 6
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "name": "Bolt Beach platform",
+          "crop": [
+            0,
+            0,
+            256,
+            248
+          ],
+          "nominalCell": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            26,
+            99,
+            226,
+            107
+          ],
+          "optionalTrimmedCrop": [
+            18,
+            91,
+            238,
+            123
+          ],
+          "cropEdgeMaxAlpha": 2,
+          "silhouetteAspectRatio": 2.11,
+          "landingSurface": [
+            30.0,
+            111.0,
+            244.0
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Bubble Pipes platform",
+          "crop": [
+            256,
+            0,
+            256,
+            248
+          ],
+          "nominalCell": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            278,
+            98,
+            226,
+            109
+          ],
+          "optionalTrimmedCrop": [
+            270,
+            90,
+            242,
+            125
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 2.07,
+          "landingSurface": [
+            280.0,
+            108.0,
+            501.0
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Gearworks platform",
+          "crop": [
+            512,
+            0,
+            256,
+            248
+          ],
+          "nominalCell": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            524,
+            96,
+            229,
+            107
+          ],
+          "optionalTrimmedCrop": [
+            516,
+            88,
+            245,
+            123
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 2.14,
+          "landingSurface": [
+            526.0409836065573,
+            109.17213114754098,
+            749.9549180327868
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Rocket Orchard platform",
+          "crop": [
+            768,
+            0,
+            256,
+            248
+          ],
+          "nominalCell": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            776,
+            96,
+            228,
+            131
+          ],
+          "optionalTrimmedCrop": [
+            768,
+            88,
+            244,
+            147
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.74,
+          "landingSurface": [
+            778.0,
+            109.0,
+            1000.0
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Magnet Sky platform",
+          "crop": [
+            0,
+            248,
+            256,
+            248
+          ],
+          "nominalCell": [
+            0,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            26,
+            324,
+            225,
+            123
+          ],
+          "optionalTrimmedCrop": [
+            18,
+            316,
+            238,
+            139
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.83,
+          "landingSurface": [
+            30.0,
+            334.0,
+            244.0
+          ]
+        },
+        {
+          "index": 5,
+          "name": "Lantern City platform",
+          "crop": [
+            256,
+            248,
+            256,
+            248
+          ],
+          "nominalCell": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            279,
+            325,
+            224,
+            115
+          ],
+          "optionalTrimmedCrop": [
+            271,
+            317,
+            240,
+            131
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.95,
+          "landingSurface": [
+            283.0,
+            338.0,
+            500.0
+          ]
+        },
+        {
+          "index": 6,
+          "name": "Bolt Beach island landmark",
+          "crop": [
+            512,
+            248,
+            256,
+            248
+          ],
+          "nominalCell": [
+            512,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            534,
+            276,
+            214,
+            211
+          ],
+          "optionalTrimmedCrop": [
+            526,
+            268,
+            230,
+            227
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 7,
+          "name": "Bubble Pipes island landmark",
+          "crop": [
+            768,
+            248,
+            256,
+            248
+          ],
+          "nominalCell": [
+            768,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            776,
+            268,
+            228,
+            220
+          ],
+          "optionalTrimmedCrop": [
+            768,
+            260,
+            244,
+            236
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 8,
+          "name": "Gearworks island landmark",
+          "crop": [
+            0,
+            496,
+            256,
+            272
+          ],
+          "nominalCell": [
+            0,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            27,
+            505,
+            221,
+            247
+          ],
+          "optionalTrimmedCrop": [
+            19,
+            497,
+            237,
+            263
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 9,
+          "name": "Rocket Orchard island landmark",
+          "crop": [
+            256,
+            496,
+            256,
+            272
+          ],
+          "nominalCell": [
+            256,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            282,
+            508,
+            216,
+            246
+          ],
+          "optionalTrimmedCrop": [
+            274,
+            500,
+            232,
+            262
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 10,
+          "name": "Magnet Sky island landmark",
+          "crop": [
+            512,
+            496,
+            256,
+            272
+          ],
+          "nominalCell": [
+            512,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            527,
+            531,
+            224,
+            211
+          ],
+          "optionalTrimmedCrop": [
+            519,
+            523,
+            240,
+            227
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 11,
+          "name": "Lantern City island landmark",
+          "crop": [
+            768,
+            496,
+            256,
+            272
+          ],
+          "nominalCell": [
+            768,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            778,
+            510,
+            220,
+            241
+          ],
+          "optionalTrimmedCrop": [
+            770,
+            502,
+            236,
+            257
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 12,
+          "name": "Cyan electric spark in cream casing",
+          "crop": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "nominalCell": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            46,
+            810,
+            177,
+            174
+          ],
+          "optionalTrimmedCrop": [
+            38,
+            802,
+            193,
+            190
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 13,
+          "name": "Golden heart gear",
+          "crop": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "nominalCell": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            305,
+            824,
+            165,
+            146
+          ],
+          "optionalTrimmedCrop": [
+            297,
+            816,
+            181,
+            162
+          ],
+          "cropEdgeMaxAlpha": 0
+        },
+        {
+          "index": 14,
+          "name": "Charging station",
+          "crop": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "nominalCell": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            539,
+            790,
+            189,
+            206
+          ],
+          "optionalTrimmedCrop": [
+            531,
+            782,
+            205,
+            222
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 15,
+          "name": "Cream-copper city gate",
+          "crop": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "nominalCell": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            773,
+            792,
+            230,
+            208
+          ],
+          "optionalTrimmedCrop": [
+            768,
+            784,
+            243,
+            224
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 16,
+          "name": "Cracked fragile platform",
+          "crop": [
+            0,
+            1024,
+            256,
+            235
+          ],
+          "nominalCell": [
+            0,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            24,
+            1097,
+            226,
+            116
+          ],
+          "optionalTrimmedCrop": [
+            16,
+            1089,
+            240,
+            132
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.95,
+          "landingSurface": [
+            27.0,
+            1111.0,
+            245.0
+          ]
+        },
+        {
+          "index": 17,
+          "name": "Golden topped fuel platform",
+          "crop": [
+            256,
+            1024,
+            256,
+            235
+          ],
+          "nominalCell": [
+            256,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            280,
+            1090,
+            221,
+            118
+          ],
+          "optionalTrimmedCrop": [
+            272,
+            1082,
+            237,
+            134
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.87,
+          "landingSurface": [
+            284.0,
+            1105.0,
+            496.0
+          ]
+        },
+        {
+          "index": 18,
+          "name": "Wheel-bot",
+          "crop": [
+            512,
+            1024,
+            256,
+            235
+          ],
+          "nominalCell": [
+            512,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            552,
+            1050,
+            180,
+            188
+          ],
+          "optionalTrimmedCrop": [
+            544,
+            1042,
+            196,
+            204
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 19,
+          "name": "Coil-foot robot",
+          "crop": [
+            768,
+            1024,
+            256,
+            235
+          ],
+          "nominalCell": [
+            768,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            809,
+            1040,
+            157,
+            203
+          ],
+          "optionalTrimmedCrop": [
+            801,
+            1032,
+            173,
+            219
+          ],
+          "cropEdgeMaxAlpha": 0
+        },
+        {
+          "index": 20,
+          "name": "Courier plane robot",
+          "crop": [
+            0,
+            1259,
+            256,
+            277
+          ],
+          "nominalCell": [
+            0,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            27,
+            1306,
+            215,
+            144
+          ],
+          "optionalTrimmedCrop": [
+            19,
+            1298,
+            231,
+            160
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 21,
+          "name": "Propeller bot",
+          "crop": [
+            256,
+            1259,
+            256,
+            277
+          ],
+          "nominalCell": [
+            256,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            296,
+            1291,
+            202,
+            166
+          ],
+          "optionalTrimmedCrop": [
+            288,
+            1283,
+            218,
+            182
+          ],
+          "cropEdgeMaxAlpha": 0
+        },
+        {
+          "index": 22,
+          "name": "Sleeping city heart battery",
+          "crop": [
+            512,
+            1259,
+            256,
+            277
+          ],
+          "nominalCell": [
+            512,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            554,
+            1283,
+            163,
+            192
+          ],
+          "optionalTrimmedCrop": [
+            546,
+            1275,
+            179,
+            208
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 23,
+          "name": "Lit heart battery with happy city",
+          "crop": [
+            768,
+            1259,
+            256,
+            277
+          ],
+          "nominalCell": [
+            768,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            774,
+            1267,
+            230,
+            222
+          ],
+          "optionalTrimmedCrop": [
+            768,
+            1259,
+            244,
+            238
+          ],
+          "cropEdgeMaxAlpha": 2
+        }
+      ],
+      "alpha": {
+        "alphaRange": [
+          0,
+          254
+        ],
+        "alpha0Pct": 55.488,
+        "alphaLT16Pct": 64.419,
+        "alphaGT240Pct": 30.945,
+        "cornersAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "present": true,
+        "genuineTransparency": true,
+        "preservedWithoutModification": true
+      },
+      "rowBounds": [
+        0,
+        248,
+        496,
+        768,
+        1024,
+        1259,
+        1536
+      ],
+      "columnBounds": [
+        0,
+        256,
+        512,
+        768,
+        1024
+      ],
+      "notes": [
+        "All 24 requested subjects are present in correct row-major order.",
+        "Custom row boundaries avoid clipping the sprites that drifted across nominal 256-pixel rows.",
+        "All source pixels and generated alpha are unchanged. Soft glow and trace near-transparent pixels remain; use generated alpha when displaying.",
+        "All four enemy variants face right.",
+        "Landmarks 8, 9, and 11 start above nominal y=512; final sticker 23 starts above nominal y=1280. Custom crops fix both.",
+        "Several platforms have deeper undersides than the requested 3:1 silhouette; measured visible width-to-height ratios are supplied per platform frame. Integration can choose render dimensions around the flat main landing edge."
+      ],
+      "optimized": {
+        "path": "public/assets/bop-world.webp",
+        "size": [
+          1024,
+          1536
+        ],
+        "quality": 84,
+        "bytes": 384214,
+        "frames": [
+          [
+            9,
+            66,
+            238,
+            123
+          ],
+          [
+            263,
+            65,
+            242,
+            125
+          ],
+          [
+            518,
+            67,
+            244,
+            122
+          ],
+          [
+            774,
+            54,
+            244,
+            147
+          ],
+          [
+            9,
+            314,
+            238,
+            139
+          ],
+          [
+            264,
+            318,
+            240,
+            131
+          ],
+          [
+            525,
+            270,
+            230,
+            227
+          ],
+          [
+            774,
+            266,
+            244,
+            236
+          ],
+          [
+            18,
+            518,
+            220,
+            244
+          ],
+          [
+            276,
+            518,
+            216,
+            244
+          ],
+          [
+            520,
+            526,
+            240,
+            227
+          ],
+          [
+            784,
+            518,
+            224,
+            244
+          ],
+          [
+            31,
+            801,
+            193,
+            190
+          ],
+          [
+            293,
+            815,
+            181,
+            162
+          ],
+          [
+            537,
+            785,
+            205,
+            222
+          ],
+          [
+            774,
+            784,
+            243,
+            224
+          ],
+          [
+            8,
+            1086,
+            240,
+            132
+          ],
+          [
+            265,
+            1085,
+            237,
+            134
+          ],
+          [
+            542,
+            1050,
+            196,
+            204
+          ],
+          [
+            809,
+            1042,
+            173,
+            219
+          ],
+          [
+            12,
+            1328,
+            231,
+            160
+          ],
+          [
+            275,
+            1317,
+            218,
+            182
+          ],
+          [
+            550,
+            1304,
+            179,
+            208
+          ],
+          [
+            774,
+            1289,
+            244,
+            238
+          ]
+        ]
+      }
+    },
+    {
+      "name": "nova-scenes.png",
+      "path": "art-source/nova-scenes.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 2507729,
+      "sha256": "a69aa61a3647b0d2b4a9729a69524f491f00e516727119042d5ff9a8fc74f44e",
+      "grid": {
+        "columns": 3,
+        "rows": 2
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "chapter": 1,
+          "name": "Moon Landing",
+          "crop": [
+            0,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 1,
+          "chapter": 2,
+          "name": "Ring Ruins",
+          "crop": [
+            362,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 2,
+          "chapter": 3,
+          "name": "Crystal Caves",
+          "crop": [
+            724,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 3,
+          "chapter": 4,
+          "name": "Sunforge",
+          "crop": [
+            0,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 4,
+          "chapter": 5,
+          "name": "Aurora Sea",
+          "crop": [
+            362,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 5,
+          "chapter": 6,
+          "name": "Star Observatory",
+          "crop": [
+            724,
+            724,
+            362,
+            724
+          ]
+        }
+      ],
+      "alpha": {
+        "present": false,
+        "opaque": true
+      },
+      "sixDiscretePortraitPanelsConfirmed": true,
+      "gridDrift": false,
+      "notes": [
+        "Strict full-bleed 3-column by 2-row grid; discontinuities confirmed at x=362, x=724, and y=724.",
+        "No text, people, or UI observed. Every chapter has distinct terrain and structures."
+      ],
+      "optimized": {
+        "path": "public/assets/nova-scenes.webp",
+        "size": [
+          1086,
+          1448
+        ],
+        "quality": 80,
+        "bytes": 214260,
+        "frames": [
+          [
+            0,
+            0,
+            362,
+            724
+          ],
+          [
+            362,
+            0,
+            362,
+            724
+          ],
+          [
+            724,
+            0,
+            362,
+            724
+          ],
+          [
+            0,
+            724,
+            362,
+            724
+          ],
+          [
+            362,
+            724,
+            362,
+            724
+          ],
+          [
+            724,
+            724,
+            362,
+            724
+          ]
+        ]
+      }
+    },
+    {
+      "name": "nova-world.png",
+      "path": "art-source/nova-world.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "bytes": 2308546,
+      "sha256": "6da4b95f0047b772b9a467433d7cfd3fdfee4c54e4f9172394a1dabc84184f17",
+      "grid": {
+        "columns": 4,
+        "rows": 6
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "name": "Moon Landing platform",
+          "crop": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            18,
+            97,
+            222,
+            120
+          ],
+          "optionalTrimmedCrop": [
+            10,
+            89,
+            238,
+            136
+          ],
+          "cropEdgeMaxAlpha": 0,
+          "silhouetteAspectRatio": 1.85,
+          "landingSurface": [
+            24.0,
+            114.0,
+            232.0
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Ring Ruins platform",
+          "crop": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            272,
+            98,
+            229,
+            115
+          ],
+          "optionalTrimmedCrop": [
+            264,
+            90,
+            245,
+            131
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.99,
+          "landingSurface": [
+            273.03688524590166,
+            112.16923076923077,
+            498.95901639344265
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Crystal Caves platform",
+          "crop": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            527,
+            97,
+            227,
+            116
+          ],
+          "optionalTrimmedCrop": [
+            519,
+            89,
+            243,
+            132
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.96,
+          "landingSurface": [
+            530.0,
+            113.0,
+            750.0
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Sunforge platform",
+          "crop": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            783,
+            97,
+            223,
+            119
+          ],
+          "optionalTrimmedCrop": [
+            775,
+            89,
+            239,
+            135
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.87,
+          "landingSurface": [
+            785.0,
+            112.0,
+            1003.0
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Aurora Sea platform",
+          "crop": [
+            0,
+            256,
+            256,
+            254
+          ],
+          "nominalCell": [
+            0,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            17,
+            345,
+            226,
+            131
+          ],
+          "optionalTrimmedCrop": [
+            9,
+            337,
+            242,
+            147
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.73,
+          "landingSurface": [
+            25.0,
+            366.0,
+            234.0
+          ]
+        },
+        {
+          "index": 5,
+          "name": "Star Observatory platform",
+          "crop": [
+            256,
+            256,
+            256,
+            254
+          ],
+          "nominalCell": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            272,
+            350,
+            228,
+            124
+          ],
+          "optionalTrimmedCrop": [
+            264,
+            342,
+            244,
+            140
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.84,
+          "landingSurface": [
+            276.0,
+            364.0,
+            494.0
+          ]
+        },
+        {
+          "index": 6,
+          "name": "Moon Landing island landmark",
+          "crop": [
+            512,
+            256,
+            256,
+            254
+          ],
+          "nominalCell": [
+            512,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            535,
+            293,
+            202,
+            202
+          ],
+          "optionalTrimmedCrop": [
+            527,
+            285,
+            218,
+            218
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 7,
+          "name": "Ring Ruins island landmark",
+          "crop": [
+            768,
+            256,
+            256,
+            254
+          ],
+          "nominalCell": [
+            768,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            781,
+            276,
+            225,
+            219
+          ],
+          "optionalTrimmedCrop": [
+            773,
+            268,
+            241,
+            235
+          ],
+          "cropEdgeMaxAlpha": 0
+        },
+        {
+          "index": 8,
+          "name": "Crystal Caves island landmark",
+          "crop": [
+            0,
+            510,
+            256,
+            260
+          ],
+          "nominalCell": [
+            0,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            17,
+            530,
+            219,
+            231
+          ],
+          "optionalTrimmedCrop": [
+            9,
+            522,
+            235,
+            247
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 9,
+          "name": "Sunforge island landmark",
+          "crop": [
+            256,
+            510,
+            256,
+            260
+          ],
+          "nominalCell": [
+            256,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            268,
+            527,
+            234,
+            229
+          ],
+          "optionalTrimmedCrop": [
+            260,
+            519,
+            250,
+            245
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 10,
+          "name": "Aurora Sea island landmark",
+          "crop": [
+            512,
+            510,
+            256,
+            260
+          ],
+          "nominalCell": [
+            512,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            529,
+            518,
+            221,
+            242
+          ],
+          "optionalTrimmedCrop": [
+            521,
+            510,
+            237,
+            258
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 11,
+          "name": "Star Observatory island landmark",
+          "crop": [
+            768,
+            510,
+            256,
+            260
+          ],
+          "nominalCell": [
+            768,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            785,
+            521,
+            218,
+            247
+          ],
+          "optionalTrimmedCrop": [
+            777,
+            513,
+            234,
+            257
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 12,
+          "name": "Golden stardrop",
+          "crop": [
+            0,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            57,
+            817,
+            143,
+            175
+          ],
+          "optionalTrimmedCrop": [
+            49,
+            809,
+            159,
+            191
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 13,
+          "name": "Star-map medallion",
+          "crop": [
+            256,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            290,
+            784,
+            191,
+            227
+          ],
+          "optionalTrimmedCrop": [
+            282,
+            776,
+            207,
+            243
+          ],
+          "cropEdgeMaxAlpha": 0
+        },
+        {
+          "index": 14,
+          "name": "Blue star obelisk",
+          "crop": [
+            512,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            550,
+            784,
+            176,
+            229
+          ],
+          "optionalTrimmedCrop": [
+            542,
+            776,
+            192,
+            245
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 15,
+          "name": "Constellation arch",
+          "crop": [
+            768,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            781,
+            788,
+            226,
+            216
+          ],
+          "optionalTrimmedCrop": [
+            773,
+            780,
+            242,
+            232
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 16,
+          "name": "Cracked fragile platform",
+          "crop": [
+            0,
+            1024,
+            256,
+            240
+          ],
+          "nominalCell": [
+            0,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            17,
+            1096,
+            228,
+            143
+          ],
+          "optionalTrimmedCrop": [
+            9,
+            1088,
+            244,
+            159
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.59,
+          "landingSurface": [
+            19.0,
+            1114.0,
+            242.0
+          ]
+        },
+        {
+          "index": 17,
+          "name": "Golden topped fuel platform",
+          "crop": [
+            256,
+            1024,
+            256,
+            240
+          ],
+          "nominalCell": [
+            256,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            271,
+            1097,
+            230,
+            131
+          ],
+          "optionalTrimmedCrop": [
+            263,
+            1089,
+            246,
+            147
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.76,
+          "landingSurface": [
+            272.07377049180326,
+            1111.150684931507,
+            498.91803278688525
+          ]
+        },
+        {
+          "index": 18,
+          "name": "Moon crab",
+          "crop": [
+            512,
+            1024,
+            256,
+            240
+          ],
+          "nominalCell": [
+            512,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            528,
+            1083,
+            240,
+            155
+          ],
+          "optionalTrimmedCrop": [
+            520,
+            1075,
+            248,
+            171
+          ],
+          "cropEdgeMaxAlpha": 18
+        },
+        {
+          "index": 19,
+          "name": "Lilac moon blob",
+          "crop": [
+            768,
+            1024,
+            256,
+            240
+          ],
+          "nominalCell": [
+            768,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            812,
+            1041,
+            166,
+            206
+          ],
+          "optionalTrimmedCrop": [
+            804,
+            1033,
+            182,
+            222
+          ],
+          "cropEdgeMaxAlpha": 3
+        },
+        {
+          "index": 20,
+          "name": "Winged star-ray",
+          "crop": [
+            0,
+            1264,
+            256,
+            272
+          ],
+          "nominalCell": [
+            0,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            20,
+            1280,
+            219,
+            187
+          ],
+          "optionalTrimmedCrop": [
+            12,
+            1272,
+            235,
+            203
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 21,
+          "name": "Orbital drone",
+          "crop": [
+            256,
+            1264,
+            256,
+            272
+          ],
+          "nominalCell": [
+            256,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            287,
+            1282,
+            207,
+            175
+          ],
+          "optionalTrimmedCrop": [
+            279,
+            1274,
+            223,
+            191
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 22,
+          "name": "Sleepy baby star",
+          "crop": [
+            512,
+            1264,
+            256,
+            272
+          ],
+          "nominalCell": [
+            512,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            560,
+            1301,
+            155,
+            158
+          ],
+          "optionalTrimmedCrop": [
+            552,
+            1293,
+            171,
+            174
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 23,
+          "name": "Happy baby star with constellation",
+          "crop": [
+            768,
+            1264,
+            256,
+            272
+          ],
+          "nominalCell": [
+            768,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            785,
+            1284,
+            220,
+            186
+          ],
+          "optionalTrimmedCrop": [
+            777,
+            1276,
+            236,
+            202
+          ],
+          "cropEdgeMaxAlpha": 0
+        }
+      ],
+      "alpha": {
+        "alphaRange": [
+          0,
+          254
+        ],
+        "alpha0Pct": 54.414,
+        "alphaLT16Pct": 65.512,
+        "alphaGT240Pct": 29.314,
+        "cornersAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "present": true,
+        "genuineTransparency": true,
+        "preservedWithoutModification": true
+      },
+      "rowBounds": [
+        0,
+        256,
+        510,
+        770,
+        1024,
+        1264,
+        1536
+      ],
+      "columnBounds": [
+        0,
+        256,
+        512,
+        768,
+        1024
+      ],
+      "notes": [
+        "All 24 requested subjects are present in correct row-major order.",
+        "Custom row boundaries avoid clipping the sprites that drifted across nominal 256-pixel rows.",
+        "All source pixels and generated alpha are unchanged. Soft glow and trace near-transparent pixels remain; use generated alpha when displaying.",
+        "All four enemy variants face right.",
+        "Observatory landmark 11 reaches y=767; swooper 20 begins at y=1280. Custom row boundaries retain padding.",
+        "Creature 18 has a tiny low-alpha fringe near the right column boundary; no solid body crosses columns.",
+        "Several platforms have deeper undersides than the requested 3:1 silhouette; measured visible width-to-height ratios are supplied per platform frame. Integration can choose render dimensions around the flat main landing edge."
+      ],
+      "optimized": {
+        "path": "public/assets/nova-world.webp",
+        "size": [
+          1024,
+          1536
+        ],
+        "quality": 84,
+        "bytes": 403038,
+        "frames": [
+          [
+            9,
+            60,
+            238,
+            136
+          ],
+          [
+            262,
+            63,
+            244,
+            130
+          ],
+          [
+            518,
+            62,
+            243,
+            132
+          ],
+          [
+            776,
+            60,
+            239,
+            135
+          ],
+          [
+            7,
+            310,
+            242,
+            147
+          ],
+          [
+            262,
+            314,
+            244,
+            140
+          ],
+          [
+            531,
+            275,
+            218,
+            218
+          ],
+          [
+            775,
+            266,
+            241,
+            235
+          ],
+          [
+            12,
+            518,
+            232,
+            244
+          ],
+          [
+            262,
+            520,
+            244,
+            239
+          ],
+          [
+            528,
+            518,
+            224,
+            244
+          ],
+          [
+            785,
+            518,
+            222,
+            244
+          ],
+          [
+            48,
+            800,
+            159,
+            191
+          ],
+          [
+            280,
+            774,
+            207,
+            243
+          ],
+          [
+            544,
+            774,
+            191,
+            244
+          ],
+          [
+            775,
+            780,
+            242,
+            232
+          ],
+          [
+            6,
+            1072,
+            244,
+            159
+          ],
+          [
+            262,
+            1079,
+            244,
+            146
+          ],
+          [
+            518,
+            1068,
+            244,
+            168
+          ],
+          [
+            805,
+            1041,
+            182,
+            222
+          ],
+          [
+            10,
+            1306,
+            235,
+            203
+          ],
+          [
+            272,
+            1312,
+            223,
+            191
+          ],
+          [
+            554,
+            1321,
+            171,
+            174
+          ],
+          [
+            778,
+            1307,
+            236,
+            202
+          ]
+        ]
+      }
+    },
+    {
+      "name": "pip-scenes.png",
+      "path": "art-source/pip-scenes.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 2903367,
+      "sha256": "f89e7b117c57fbf83acb22017fb0565bf9064d45b2a985944259464cdc8a0853",
+      "grid": {
+        "columns": 3,
+        "rows": 2
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "chapter": 1,
+          "name": "Fern Hollow",
+          "crop": [
+            0,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 1,
+          "chapter": 2,
+          "name": "Mushroom Grove",
+          "crop": [
+            362,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 2,
+          "chapter": 3,
+          "name": "Root Tunnels",
+          "crop": [
+            724,
+            0,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 3,
+          "chapter": 4,
+          "name": "Honey Cliffs",
+          "crop": [
+            0,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 4,
+          "chapter": 5,
+          "name": "Cloud Canopy",
+          "crop": [
+            362,
+            724,
+            362,
+            724
+          ]
+        },
+        {
+          "index": 5,
+          "chapter": 6,
+          "name": "Heart Tree",
+          "crop": [
+            724,
+            724,
+            362,
+            724
+          ]
+        }
+      ],
+      "alpha": {
+        "present": false,
+        "opaque": true
+      },
+      "sixDiscretePortraitPanelsConfirmed": true,
+      "gridDrift": false,
+      "notes": [
+        "Strict full-bleed 3-column by 2-row grid; discontinuities confirmed at x=362, x=724, and y=724.",
+        "No text, people, or UI observed. Every chapter has distinct terrain and structures."
+      ],
+      "optimized": {
+        "path": "public/assets/pip-scenes.webp",
+        "size": [
+          1086,
+          1448
+        ],
+        "quality": 80,
+        "bytes": 302510,
+        "frames": [
+          [
+            0,
+            0,
+            362,
+            724
+          ],
+          [
+            362,
+            0,
+            362,
+            724
+          ],
+          [
+            724,
+            0,
+            362,
+            724
+          ],
+          [
+            0,
+            724,
+            362,
+            724
+          ],
+          [
+            362,
+            724,
+            362,
+            724
+          ],
+          [
+            724,
+            724,
+            362,
+            724
+          ]
+        ]
+      }
+    },
+    {
+      "name": "pip-world.png",
+      "path": "art-source/pip-world.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "bytes": 2518167,
+      "sha256": "47728250d3311b3408f425e48c4624ec296bb96cc1442a75b013319c5973ea89",
+      "grid": {
+        "columns": 4,
+        "rows": 6
+      },
+      "orderConfirmed": true,
+      "missingFrames": [],
+      "frames": [
+        {
+          "index": 0,
+          "name": "Fern Hollow platform",
+          "crop": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            12,
+            65,
+            239,
+            155
+          ],
+          "optionalTrimmedCrop": [
+            4,
+            57,
+            252,
+            171
+          ],
+          "cropEdgeMaxAlpha": 3,
+          "silhouetteAspectRatio": 1.54,
+          "landingSurface": [
+            17.42622950819672,
+            94.0843373493976,
+            240.50819672131146
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Mushroom Grove platform",
+          "crop": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            270,
+            84,
+            233,
+            115
+          ],
+          "optionalTrimmedCrop": [
+            262,
+            76,
+            249,
+            131
+          ],
+          "cropEdgeMaxAlpha": 2,
+          "silhouetteAspectRatio": 2.03,
+          "landingSurface": [
+            272.2049180327869,
+            102.609375,
+            496.71311475409834
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Root Tunnels platform",
+          "crop": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            522,
+            72,
+            234,
+            139
+          ],
+          "optionalTrimmedCrop": [
+            514,
+            64,
+            250,
+            155
+          ],
+          "cropEdgeMaxAlpha": 2,
+          "silhouetteAspectRatio": 1.68,
+          "landingSurface": [
+            526.2950819672132,
+            99.9271523178808,
+            752.7295081967213
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Honey Cliffs platform",
+          "crop": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "nominalCell": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            777,
+            82,
+            234,
+            127
+          ],
+          "optionalTrimmedCrop": [
+            769,
+            74,
+            250,
+            143
+          ],
+          "cropEdgeMaxAlpha": 1,
+          "silhouetteAspectRatio": 1.84,
+          "landingSurface": [
+            779.2459016393443,
+            94.42857142857143,
+            1006.7049180327868
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Cloud Canopy platform",
+          "crop": [
+            0,
+            256,
+            256,
+            250
+          ],
+          "nominalCell": [
+            0,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            12,
+            329,
+            240,
+            131
+          ],
+          "optionalTrimmedCrop": [
+            4,
+            321,
+            252,
+            147
+          ],
+          "cropEdgeMaxAlpha": 5,
+          "silhouetteAspectRatio": 1.83,
+          "landingSurface": [
+            17.42622950819672,
+            339.6338028169014,
+            242.5737704918033
+          ]
+        },
+        {
+          "index": 5,
+          "name": "Heart Tree platform",
+          "crop": [
+            256,
+            256,
+            256,
+            250
+          ],
+          "nominalCell": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            268,
+            327,
+            234,
+            146
+          ],
+          "optionalTrimmedCrop": [
+            260,
+            319,
+            250,
+            162
+          ],
+          "cropEdgeMaxAlpha": 4,
+          "silhouetteAspectRatio": 1.6,
+          "landingSurface": [
+            269.22131147540983,
+            342.5822784810127,
+            497.70491803278685
+          ]
+        },
+        {
+          "index": 6,
+          "name": "Fern Hollow island landmark",
+          "crop": [
+            512,
+            256,
+            256,
+            250
+          ],
+          "nominalCell": [
+            512,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            529,
+            278,
+            223,
+            215
+          ],
+          "optionalTrimmedCrop": [
+            521,
+            270,
+            239,
+            231
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 7,
+          "name": "Mushroom Grove island landmark",
+          "crop": [
+            768,
+            256,
+            256,
+            250
+          ],
+          "nominalCell": [
+            768,
+            256,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            783,
+            273,
+            214,
+            222
+          ],
+          "optionalTrimmedCrop": [
+            775,
+            265,
+            230,
+            238
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 8,
+          "name": "Root Tunnels island landmark",
+          "crop": [
+            0,
+            506,
+            256,
+            264
+          ],
+          "nominalCell": [
+            0,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            16,
+            518,
+            232,
+            242
+          ],
+          "optionalTrimmedCrop": [
+            8,
+            510,
+            248,
+            258
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 9,
+          "name": "Honey Cliffs island landmark",
+          "crop": [
+            256,
+            506,
+            256,
+            264
+          ],
+          "nominalCell": [
+            256,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            277,
+            519,
+            219,
+            240
+          ],
+          "optionalTrimmedCrop": [
+            269,
+            511,
+            235,
+            256
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 10,
+          "name": "Cloud Canopy island landmark",
+          "crop": [
+            512,
+            506,
+            256,
+            264
+          ],
+          "nominalCell": [
+            512,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            521,
+            522,
+            223,
+            235
+          ],
+          "optionalTrimmedCrop": [
+            513,
+            514,
+            239,
+            251
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 11,
+          "name": "Heart Tree island landmark",
+          "crop": [
+            768,
+            506,
+            256,
+            264
+          ],
+          "nominalCell": [
+            768,
+            512,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            777,
+            518,
+            230,
+            245
+          ],
+          "optionalTrimmedCrop": [
+            769,
+            510,
+            246,
+            260
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 12,
+          "name": "Dewdrop in leaf",
+          "crop": [
+            0,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            36,
+            827,
+            187,
+            148
+          ],
+          "optionalTrimmedCrop": [
+            28,
+            819,
+            203,
+            164
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 13,
+          "name": "Wish seed",
+          "crop": [
+            256,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            288,
+            795,
+            194,
+            197
+          ],
+          "optionalTrimmedCrop": [
+            280,
+            787,
+            210,
+            213
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 14,
+          "name": "Flower lantern",
+          "crop": [
+            512,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            530,
+            782,
+            198,
+            220
+          ],
+          "optionalTrimmedCrop": [
+            522,
+            774,
+            214,
+            236
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 15,
+          "name": "Flowering root arch",
+          "crop": [
+            768,
+            770,
+            256,
+            254
+          ],
+          "nominalCell": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            772,
+            779,
+            241,
+            221
+          ],
+          "optionalTrimmedCrop": [
+            768,
+            771,
+            253,
+            237
+          ],
+          "cropEdgeMaxAlpha": 2
+        },
+        {
+          "index": 16,
+          "name": "Cracked fragile platform",
+          "crop": [
+            0,
+            1024,
+            256,
+            222
+          ],
+          "nominalCell": [
+            0,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            12,
+            1060,
+            240,
+            170
+          ],
+          "optionalTrimmedCrop": [
+            4,
+            1052,
+            252,
+            186
+          ],
+          "cropEdgeMaxAlpha": 3,
+          "silhouetteAspectRatio": 1.41,
+          "landingSurface": [
+            18.459016393442624,
+            1096.4333333333334,
+            242.5737704918033
+          ]
+        },
+        {
+          "index": 17,
+          "name": "Golden topped fuel platform",
+          "crop": [
+            256,
+            1024,
+            256,
+            222
+          ],
+          "nominalCell": [
+            256,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            268,
+            1064,
+            234,
+            161
+          ],
+          "optionalTrimmedCrop": [
+            260,
+            1056,
+            250,
+            177
+          ],
+          "cropEdgeMaxAlpha": 3,
+          "silhouetteAspectRatio": 1.45,
+          "landingSurface": [
+            271.2704918032787,
+            1093.8554913294797,
+            496.6803278688525
+          ]
+        },
+        {
+          "index": 18,
+          "name": "Ladybug",
+          "crop": [
+            512,
+            1024,
+            256,
+            222
+          ],
+          "nominalCell": [
+            512,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            538,
+            1069,
+            213,
+            153
+          ],
+          "optionalTrimmedCrop": [
+            530,
+            1061,
+            229,
+            169
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 19,
+          "name": "Forest frog",
+          "crop": [
+            768,
+            1024,
+            256,
+            222
+          ],
+          "nominalCell": [
+            768,
+            1024,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            783,
+            1044,
+            208,
+            178
+          ],
+          "optionalTrimmedCrop": [
+            775,
+            1036,
+            224,
+            194
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 20,
+          "name": "Honeybee",
+          "crop": [
+            0,
+            1246,
+            256,
+            290
+          ],
+          "nominalCell": [
+            0,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            33,
+            1272,
+            202,
+            200
+          ],
+          "optionalTrimmedCrop": [
+            25,
+            1264,
+            218,
+            216
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 21,
+          "name": "Firefly",
+          "crop": [
+            256,
+            1246,
+            256,
+            290
+          ],
+          "nominalCell": [
+            256,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            293,
+            1289,
+            198,
+            188
+          ],
+          "optionalTrimmedCrop": [
+            285,
+            1281,
+            214,
+            204
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 22,
+          "name": "Dormant heart seed",
+          "crop": [
+            512,
+            1246,
+            256,
+            290
+          ],
+          "nominalCell": [
+            512,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            555,
+            1281,
+            164,
+            188
+          ],
+          "optionalTrimmedCrop": [
+            547,
+            1273,
+            180,
+            204
+          ],
+          "cropEdgeMaxAlpha": 1
+        },
+        {
+          "index": 23,
+          "name": "Blooming heart seed",
+          "crop": [
+            768,
+            1246,
+            256,
+            290
+          ],
+          "nominalCell": [
+            768,
+            1280,
+            256,
+            256
+          ],
+          "visibleBoundsAlphaGE16": [
+            791,
+            1254,
+            210,
+            230
+          ],
+          "optionalTrimmedCrop": [
+            783,
+            1246,
+            226,
+            246
+          ],
+          "cropEdgeMaxAlpha": 1
+        }
+      ],
+      "alpha": {
+        "alphaRange": [
+          0,
+          254
+        ],
+        "alpha0Pct": 45.158,
+        "alphaLT16Pct": 59.466,
+        "alphaGT240Pct": 31.766,
+        "cornersAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "present": true,
+        "genuineTransparency": true,
+        "preservedWithoutModification": true
+      },
+      "rowBounds": [
+        0,
+        256,
+        506,
+        770,
+        1024,
+        1246,
+        1536
+      ],
+      "columnBounds": [
+        0,
+        256,
+        512,
+        768,
+        1024
+      ],
+      "notes": [
+        "All 24 requested subjects are present in correct row-major order.",
+        "Custom row boundaries avoid clipping the sprites that drifted across nominal 256-pixel rows.",
+        "All source pixels and generated alpha are unchanged. Soft glow and trace near-transparent pixels remain; use generated alpha when displaying.",
+        "All four enemy variants face right.",
+        "Honeybee 20 and final sticker 23 start above nominal y=1280. Custom final row starts at y=1246.",
+        "Platforms 0, 2, 16, and 17 contain tiny leaf sprouts above the landing surface. Platform 1 has a slightly rounded mushroom top. The main landing surfaces are broadly horizontal; these details are not perfectly flat.",
+        "Visible rows 3 and 4 have a relatively narrow gap; supplied crops include the complete silhouettes.",
+        "Several platforms have deeper undersides than the requested 3:1 silhouette; measured visible width-to-height ratios are supplied per platform frame. Integration can choose render dimensions around the flat main landing edge."
+      ],
+      "optimized": {
+        "path": "public/assets/pip-world.webp",
+        "size": [
+          1024,
+          1536
+        ],
+        "quality": 84,
+        "bytes": 516954,
+        "frames": [
+          [
+            6,
+            45,
+            244,
+            166
+          ],
+          [
+            262,
+            64,
+            244,
+            128
+          ],
+          [
+            518,
+            52,
+            244,
+            151
+          ],
+          [
+            774,
+            58,
+            244,
+            140
+          ],
+          [
+            6,
+            313,
+            244,
+            142
+          ],
+          [
+            262,
+            305,
+            244,
+            158
+          ],
+          [
+            520,
+            268,
+            239,
+            231
+          ],
+          [
+            781,
+            265,
+            230,
+            238
+          ],
+          [
+            10,
+            518,
+            235,
+            244
+          ],
+          [
+            272,
+            518,
+            224,
+            244
+          ],
+          [
+            524,
+            518,
+            232,
+            244
+          ],
+          [
+            780,
+            518,
+            231,
+            244
+          ],
+          [
+            26,
+            814,
+            203,
+            164
+          ],
+          [
+            279,
+            789,
+            210,
+            213
+          ],
+          [
+            533,
+            778,
+            214,
+            236
+          ],
+          [
+            774,
+            781,
+            244,
+            229
+          ],
+          [
+            6,
+            1062,
+            244,
+            180
+          ],
+          [
+            262,
+            1065,
+            244,
+            173
+          ],
+          [
+            525,
+            1067,
+            229,
+            169
+          ],
+          [
+            784,
+            1055,
+            224,
+            194
+          ],
+          [
+            19,
+            1300,
+            218,
+            216
+          ],
+          [
+            277,
+            1306,
+            214,
+            204
+          ],
+          [
+            550,
+            1306,
+            180,
+            204
+          ],
+          [
+            784,
+            1286,
+            224,
+            244
+          ]
+        ]
+      }
+    }
+  ],
+  "landingSurfaceFormat": "[left x, surface y, right x] in original source pixels; excludes decorative leaves and underside. Optimized anchors are frame-relative pixels in sprites.json _surfaces."
+}

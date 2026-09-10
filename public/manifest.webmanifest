@@ -1,0 +1,30 @@
+{
+  "id": "./",
+  "name": "Galactic Jumpers",
+  "short_name": "Jumpers",
+  "description": "Three friends, three story worlds, and 18 illustrated chapters. Jump, fly, and bring a little world to life.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07151d",
+  "theme_color": "#07151d",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "lang": "en",
+  "categories": [
+    "games"
+  ],
+  "prefer_related_applications": false
+}
